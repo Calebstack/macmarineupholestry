@@ -6,10 +6,12 @@
   <meta name="theme-color" content="#17221c">
   <meta name="description" content="Custom upholstery and interior work for boats, vehicles, and aircraft. Built for life on the move.">
   <title>MacMarine | Custom Upholstery</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="shortcut icon" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
@@ -25,16 +27,17 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
       <a class="nav-cta" href="#contact">Start a project <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <video class="hero-video" autoplay muted loop playsinline aria-hidden="true" tabindex="-1">
-        <source src="assets/videos/vid1.mp4" type="video/mp4">
-      </video>
+      <div class="hero-video-frame" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline tabindex="-1">
+          <source src="assets/videos/vid1.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="hero-texture" aria-hidden="true"></div>
       <div class="hero-topline"><span>MACMARINE CUSTOM UPHOLSTERY</span><span>MARINE / AUTO / AVIATION</span></div>
       <div class="hero-content">
@@ -46,11 +49,13 @@
         </div>
       </div>
       <div class="video-stamp"><span class="record-dot"></span> MACMARINE / ON THE WATER</div>
-      <div class="hero-index" aria-hidden="true">MM<span>01</span></div>
     </section>
 
-    <div class="ticker" aria-label="Custom interiors for marine, automotive, and aviation">
-      <div class="ticker-track"><span>MADE TO MOVE</span><i>✳</i><span>BUILT TO LAST</span><i>✳</i><span>MADE TO MOVE</span><i>✳</i><span>BUILT TO LAST</span><i>✳</i><span>MADE TO MOVE</span><i>✳</i><span>BUILT TO LAST</span><i>✳</i></div>
+    <div class="ticker" role="img" aria-label="Made to move. Built to last. Custom interiors for marine, automotive, and aviation.">
+      <div class="ticker-track" aria-hidden="true">
+        <div class="ticker-group"><span>MADE TO MOVE</span><i>✳</i><span>BUILT TO LAST</span><i>✳</i><span>MADE TO MOVE</span><i>✳</i><span>BUILT TO LAST</span><i>✳</i></div>
+        <div class="ticker-group"><span>MADE TO MOVE</span><i>✳</i><span>BUILT TO LAST</span><i>✳</i><span>MADE TO MOVE</span><i>✳</i><span>BUILT TO LAST</span><i>✳</i></div>
+      </div>
     </div>
 
     <section class="section about-section" id="about" aria-labelledby="about-title">
@@ -61,13 +66,16 @@
           <h2 id="about-title">GOOD WORK<br>GOES <em>PLACES.</em></h2>
           <p class="body-copy">MacMarine brings fresh life to the interiors you spend your days in. From boat seating to vehicle and aircraft upholstery, every project is approached with care, practical materials, and an eye for the finish.</p>
           <a class="text-link" href="#contact">Tell us what you're working on <span aria-hidden="true">↗</span></a>
-          <div class="about-note"><span class="note-number">01</span><span>Custom upholstery<br>for life on the move</span></div>
         </div>
         <div class="about-video-wrap">
-          <video class="about-video" controls playsinline preload="metadata" aria-label="MacMarine shop video">
+          <video class="about-video" autoplay muted loop playsinline preload="auto" aria-label="MacMarine shop video">
             <source src="assets/videos/vid2.mp4" type="video/mp4">
             Your browser does not support embedded video.
           </video>
+          <span class="video-film-label">MACMARINE / SHOP FILM</span>
+          <button class="video-sound-toggle" type="button" aria-label="Turn shop video sound on" aria-pressed="false" title="Turn sound on">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15 9a4 4 0 0 1 0 6m3-9a8 8 0 0 1 0 12"/><path class="sound-off-mark" d="m16 9 5 6m0-6-5 6"/></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -77,9 +85,9 @@
         <div class="section-kicker"><span>02 / WHAT WE DO</span><span>THREE WAYS TO GET OUT THERE</span></div>
         <div class="services-heading"><h2 id="services-title">YOUR WORLD.<br><em>YOUR INTERIOR.</em></h2><p>Custom upholstery and interior refreshes shaped around how you travel, work, and play.</p></div>
         <div class="service-list">
-          <article class="service-row"><span class="service-number">01</span><div><h3>BOATS</h3><p>Marine seating, cushions, and interior trim.</p></div><span class="service-symbol" aria-hidden="true">↗</span></article>
-          <article class="service-row"><span class="service-number">02</span><div><h3>VEHICLES</h3><p>Cabin upholstery and details for the road.</p></div><span class="service-symbol" aria-hidden="true">↗</span></article>
-          <article class="service-row"><span class="service-number">03</span><div><h3>AIRCRAFT</h3><p>Interior seating and upholstery for the cabin.</p></div><span class="service-symbol" aria-hidden="true">↗</span></article>
+          <article class="service-row"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m5 27 5-12h28l5 12-5 8H11zM10 27h28M15 15v-5h18v5M8 40c4-3 7 3 11 0s7 3 11 0 7 3 11 0"/></svg></span><div class="service-copy"><h3>BOATS</h3><p>Marine seating, cushions, and interior trim.</p></div></article>
+          <article class="service-row"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M7 29h34l-3-10a4 4 0 0 0-4-3H14a4 4 0 0 0-4 3zM7 29v7h34v-7M13 36v4m22-4v4M14 24h20M12 19l3-7h18l3 7"/></svg></span><div class="service-copy"><h3>VEHICLES</h3><p>Cabin upholstery and details for the road.</p></div></article>
+          <article class="service-row"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m4 26 17-5 4-15 4-1 2 15 13 6-1 4-13-2-2 10-5 2-2-12-15 2zM12 33l8-1m10 1 6 1"/></svg></span><div class="service-copy"><h3>AIRCRAFT</h3><p>Interior seating and upholstery for the cabin.</p></div></article>
         </div>
       </div>
     </section>
@@ -124,6 +132,24 @@
       </div>
     </section>
 
+    <dialog class="gallery-lightbox" aria-label="MacMarine project photo viewer">
+      <div class="lightbox-toolbar">
+        <p>MACMARINE / PROJECT GALLERY</p>
+        <button class="lightbox-close" type="button" aria-label="Close photo viewer" title="Close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <div class="lightbox-stage">
+        <button class="lightbox-step lightbox-previous" type="button" aria-label="Previous photo" title="Previous photo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <img class="lightbox-image" alt="">
+        <button class="lightbox-step lightbox-next" type="button" aria-label="Next photo" title="Next photo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </dialog>
+
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
       <div class="section contact-inner">
         <div class="section-kicker"><span>05 / GET IN TOUCH</span><span>LET'S MAKE SOMETHING LAST</span></div>
@@ -140,7 +166,7 @@
           </form>
           <div class="map-column">
             <div class="map-frame"><iframe title="MacMarine at 10084 Highway 39, Cross Hill, South Carolina" src="https://www.google.com/maps?q=10084+Hwy+39%2C+Cross+Hill%2C+SC+29332&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=10084+Hwy+39%2C+Cross+Hill%2C+SC+29332" target="_blank" rel="noreferrer">OPEN IN MAPS <span aria-hidden="true">↗</span></a></div>
-            <div class="service-areas"><div><span class="area-label">SERVICE AREAS</span><span class="area-note">Based in Cross Hill, South Carolina</span></div><span class="area-placeholder">Saluda, SC</span><span class="area-placeholder">Laurens, SC</span><span class="area-placeholder">Greenwood County, SC</span><span class="area-placeholder">Laurens County, SC</span><span class="area-placeholder">Lexington County, SC</span><span class="area-placeholder">Newberry, SC</span><span class="area-placeholder">McCormick, SC</span><span class="area-placeholder">Cross Hill, SC</span></div>
+            <div class="service-areas"><div class="service-areas-heading"><span class="area-label">SERVICE AREAS</span><span class="area-note">Based in Cross Hill, South Carolina</span></div><ul class="service-area-list"><li>Saluda, SC</li><li>Laurens, SC</li><li>Greenwood County, SC</li><li>Laurens County, SC</li><li>Lexington County, SC</li><li>Newberry, SC</li><li>McCormick, SC</li><li>Cross Hill, SC</li></ul></div>
           </div>
         </div>
       </div>
@@ -149,8 +175,8 @@
 
   <footer class="site-footer">
     <div class="footer-main">
-      <div class="footer-brand"><a href="#top" aria-label="MacMarine home"><img src="assets/images/logo.png" alt="MacMarine logo"></a><p>INTERIORS FOR THE<br>LONG WAY ROUND.</p><div class="social-links"><a href="#contact" aria-label="Instagram profile" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-fill" cx="18" cy="6.5" r="1"/></svg></a><a href="#contact" aria-label="Facebook profile" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="facebook-mark" d="M14.2 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.3 1.6-4.3 4.5v2.1H7.8v3.2h2.8V21z"/></svg></a></div></div>
-      <div class="footer-column"><h2>QUICK LINKS</h2><a href="#about">About us</a><a href="#services">Services</a><a href="#transformations">Before &amp; after</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+      <div class="footer-brand"><a href="#top" aria-label="MacMarine home"><img src="assets/images/logo.png" alt="MacMarine logo"></a><p>INTERIORS FOR THE<br>LONG WAY ROUND.</p><div class="social-links"><a href="https://www.facebook.com/profile.php?id=100086485999868" target="_blank" rel="noreferrer" aria-label="Visit MacMarine on Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="facebook-mark" d="M14.2 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.3 1.6-4.3 4.5v2.1H7.8v3.2h2.8V21z"/></svg></a><a href="tel:+18645546453" aria-label="Call MacMarine at +1 864-554-6453" title="Call MacMarine"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L7 9.5a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2.1z"/></svg></a><a href="mailto:macmarineupholstery@gmail.com" aria-label="Email MacMarine" title="Email MacMarine"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a></div></div>
+      <div class="footer-column"><h2>QUICK LINKS</h2><a href="#about">About us</a><a href="#services">Services</a><a href="#transformations">Before &amp; after</a><a href="#gallery">Gallery</a></div>
       <div class="footer-column footer-contact"><h2>CONTACT</h2><a href="tel:+18645546453">+1 864-554-6453</a><a href="mailto:macmarineupholstery@gmail.com">macmarineupholstery@gmail.com</a><span>10084 Hwy 39<br>Cross Hill, SC 29332</span><a href="https://www.google.com/maps/search/?api=1&query=10084+Hwy+39%2C+Cross+Hill%2C+SC+29332" target="_blank" rel="noreferrer">Find us on Maps ↗</a></div>
     </div>
     <div class="footer-bottom"><span>© <span id="current-year"></span> MACMARINE. ALL RIGHTS RESERVED.</span><a href="#top">BACK TO THE TOP ↑</a><span>BUILT FOR THE JOURNEY.</span></div>
